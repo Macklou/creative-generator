@@ -9,7 +9,6 @@ function displayCreative(response) {
   document.getElementById("loader").style.display = "none";
   document.getElementById("creative").style.display = "block";
 
-  typewriter.stop();
   typewriter.strings = [response.data.answer];
   typewriter.start();
 }
