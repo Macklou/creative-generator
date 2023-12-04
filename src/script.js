@@ -1,16 +1,11 @@
-const typewriter = new Typewriter("#creative", {
-  strings: [],
-  autoStart: false,
-  delay: 1,
-  cursor: "",
-});
-
 function displayCreative(response) {
   document.getElementById("loader").style.display = "none";
-  document.getElementById("creative").style.display = "block";
-
-  typewriter.strings = [response.data.answer];
-  typewriter.start();
+  new Typewriter("#creative", {
+    strings: [response.data.answer],
+    autoStart: true,
+    delay: 1,
+    cursor: "",
+  });
 }
 
 function generateCreative(event) {
@@ -25,10 +20,6 @@ function generateCreative(event) {
     console.error("User input is empty.");
     return;
   }
-  document.getElementById("loader").style.display = "block";
-  document.getElementById("creative").style.display = "none";
-
-  typewriter.stop();
 
   let apiKey = "cao1cb110f2cb023f87a82357a1c4tea";
   let prompt = `User Instructions: Generate a quote about ${userInput}`;
