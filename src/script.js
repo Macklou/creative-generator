@@ -1,22 +1,24 @@
+function displayCreative(response) {
+  new Typewriter("#creative", {
+    strings: [response.data.answer],
+    autoStart: true,
+    delay: 1,
+    cursor: "",
+  });
+}
+
 function generateCreative(event) {
   event.preventDefault();
 
-  let topic = document.querySelector('input[type="text"]').value;
-  let poemElement = document.getElementById("poem");
+  let instructionsInput = document.querySelector("#instructionsInput");
 
-  let poem = `
-    My life closed twice before its close—
-    It yet remains to see
-    If Immortality unveil
-    A third event to me
+  let apiKey = "cao1cb110f2cb023f87a82357a1c4tea";
+  let prompt = `User Instructions: Generate a quote about ${instructionsInput.value}`;
+  let context =
+    "You are an intelligent expert and able to provide quotes from famous people on any subject in basic HTML. Make sure to follow the user prompts";
+  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-    So huge, so hopeless to conceive
-    As these that twice befell.
-    Parting is all we know of heaven,
-    And all we need of hell.
-  `;
-
-  poemElement.innerHTML = poem;
+  axios.get(apiURL).then(displayCreative);
 }
 
 let creativeFormElement = document.querySelector("#creative-generator-form");
