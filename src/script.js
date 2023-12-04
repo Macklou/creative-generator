@@ -7,11 +7,10 @@ const typewriter = new Typewriter("#creative", {
 
 function displayCreative(response) {
   document.getElementById("loader").style.display = "none";
+  document.getElementById("creative").style.display = "block";
 
-  // Update the strings array
   typewriter.strings = [response.data.answer];
 
-  // Start the typewriter
   typewriter.start();
 }
 
@@ -28,6 +27,8 @@ function generateCreative(event) {
     return;
   }
   document.getElementById("loader").style.display = "block";
+  document.getElementById("creative").style.display = "none";
+
   let apiKey = "cao1cb110f2cb023f87a82357a1c4tea";
   let prompt = `User Instructions: Generate a quote about ${userInput}`;
   let context =
