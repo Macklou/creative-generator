@@ -38,4 +38,3 @@ function generateCreative(event) {
 
 let creativeFormElement = document.querySelector("#creative-generator-form");
 creativeFormElement.addEventListener("submit", generateCreative);
-creativeFormElement.classList.remove("hidden");
