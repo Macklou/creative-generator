@@ -8,10 +8,10 @@ const typewriter = new Typewriter("#creative", {
 function displayCreative(response) {
   document.getElementById("loader").style.display = "none";
 
-  typewriter.deleteAll();
-
+  // Update the strings array
   typewriter.strings = [response.data.answer];
 
+  // Start the typewriter
   typewriter.start();
 }
 
@@ -27,7 +27,6 @@ function generateCreative(event) {
     console.error("User input is empty.");
     return;
   }
-
   document.getElementById("loader").style.display = "block";
   let apiKey = "cao1cb110f2cb023f87a82357a1c4tea";
   let prompt = `User Instructions: Generate a quote about ${userInput}`;
