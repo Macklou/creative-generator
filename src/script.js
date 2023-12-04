@@ -1,10 +1,18 @@
+const typewriter = new Typewriter("#creative", {
+  strings: [],
+  autoStart: false,
+  delay: 1,
+  cursor: "",
+});
+
 function displayCreative(response) {
   document.getElementById("loader").style.display = "none";
-  new Typewriter("#creative", {
-    strings: [response.data.answer],
-    autoStart: true,
-    delay: 1,
-  });
+
+  typewriter.deleteAll();
+
+  typewriter.strings = [response.data.answer];
+
+  typewriter.start();
 }
 
 function generateCreative(event) {
