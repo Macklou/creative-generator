@@ -128,3 +128,10 @@ footer {
     transform: rotate(360deg);
   }
 }
+.submit-button:hover {
+  background: #5e3da3;
+}
+
+.form-container {
+  transition: box-shadow 0.3s ease;
+}
