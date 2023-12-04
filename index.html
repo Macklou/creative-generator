@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <title>AI Generator</title>
+    <!-- ... (your existing head content) ... -->
   </head>
   <body>
     <header>
-      <h1>AI Quote Generator</h1>
+      <h1>AI Creative Generator</h1>
     </header>
 
     <main>
       <form id="creative-generator-form">
         <input
           type="text"
-          placeholder="Enter the topic you would like a quote on"
+          placeholder="Enter the topic"
           autofocus
           required
           autocomplete="off"
@@ -25,10 +20,7 @@
         <input type="submit" class="submit-button" />
       </form>
       <div class="hint">i.e. flowers, work, art</div>
-      <div class="creative-container">
-        <div class="creative" id="creative"></div>
-        <div class="loader" id="loader"></div>
-      </div>
+      <div class="creative" id="creative"></div>
     </main>
     <footer>
       This AI project was coded by
