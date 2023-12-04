@@ -20,7 +20,7 @@ function generateCreative(event) {
     console.error("User input is empty.");
     return;
   }
-
+  document.getElementById("loader").style.display = "block";
   let apiKey = "cao1cb110f2cb023f87a82357a1c4tea";
   let prompt = `User Instructions: Generate a quote about ${userInput}`;
   let context =
