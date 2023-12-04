@@ -6,7 +6,26 @@ function displayCreative(response) {
     cursor: "",
   });
 }
+function generateCreative(event) {
+  event.preventDefault();
 
+  let instructionsInput = document.querySelector("#instructionsInput");
+  let userInput = instructionsInput.value.trim();
+
+  if (userInput === "") {
+    return;
+  }
+}
+function generateCreative(event) {
+  event.preventDefault();
+
+  axios
+    .get(apiURL)
+    .then(displayCreative)
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+}
 function generateCreative(event) {
   event.preventDefault();
 
