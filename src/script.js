@@ -1,4 +1,5 @@
 function displayCreative(response) {
+  document.getElementById("loader").style.display = "none";
   new Typewriter("#creative", {
     strings: [response.data.answer],
     autoStart: true,

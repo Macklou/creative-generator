@@ -109,26 +109,6 @@ footer {
   font-size: 12px;
   color: #272044;
 }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.loading::after {
-  content: "";
-  display: inline-block;
-  border: 4px solid #ffffff;
-  border-top: 4px solid #272044;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-  animation: spin 1s linear infinite;
-}
 .loader {
   border: 8px solid #f3f3f3;
   border-top: 8px solid #885df1;
@@ -147,21 +127,4 @@ footer {
   100% {
     transform: rotate(360deg);
   }
-}
-.creative-container {
-  position: relative;
-}
-
-.loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #885df1;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-  display: none;
 }
